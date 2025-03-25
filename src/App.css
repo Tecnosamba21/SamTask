@@ -129,3 +129,12 @@ input:focus {
 .task button:hover {
     background-color: #c57d7d;
 }
+
+@media (max-width: 1250px) {
+    .input {
+        width: 350px;
+    }
+    .task {
+        width: 350px;
+    }
+}
