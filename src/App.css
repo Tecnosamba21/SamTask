@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    color-scheme: light dark;
+    --font: "Winky Sans", Arial;
+    --font-color: light-dark(black, white);
+    --submit: light-dark(url('../assets/submit-dark.svg'), url('../assets/submit-light.svg'));
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    height: 100vh;
+    width: 100%;
+    font-family: var(--font);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5vh;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    border-radius: 999999px;
+    padding: 7px;
+    border: 2px solid var(--font-color);
+    width: 450px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#submit {
+    transition: scale .5s;
+    cursor: pointer;
+}
+
+#submit:hover {
+    scale: 120%;
+}
+
+
+input {
+    flex: 1;
+    font-family: var(--font);
+    font-size: large;
+    border: 0;
+    padding: 3px;
+}
+
+input:active,
+input:focus {
+    outline: 0;
+}
+
+#tasks {
+    display: block;
+    max-height: 400px;
+}
+
+@keyframes appear {
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
+}
+
+.task {
+    animation: appear .5s;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    border: 2px solid var(--font-color);
+    width: 450px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    h3 {
+        max-width: 300px;
+        font-weight: 400;
+    }
+    button {
+        width: 30px;
+        height: 30px;
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+        opacity: 0%;
+        transition: all .5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+    }
+}
+
+.task:hover {
+    button {
+        opacity: 100%;
+    }
+}
+
+.task button:hover {
+    background-color: #c57d7d;
+}
