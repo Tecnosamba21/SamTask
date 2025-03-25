@@ -1,7 +1,7 @@
 import './App.css'
 
 let submit_src
-let trash_src = '/assets/trash.svg'
+let trash_src = './assets/trash.svg'
 
 function createTask(text) {
   const container = document.getElementById('tasks')
@@ -64,16 +64,16 @@ function keyDown(e) {
 function App() {
 
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    submit_src = '/assets/submit-dark.svg'
+    submit_src = './assets/submit-dark.svg'
   } else {
-    submit_src = '/assets/submit-light.svg'
+    submit_src = './assets/submit-light.svg'
   }
 
 
   return (
     <>
       <title>SamTask - Never forget anything!</title>
-      <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+      <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
       <div className="app">
         <header>
           <div className="title">
