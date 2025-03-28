@@ -12,6 +12,7 @@ function createTask(text) {
   h3.textContent = text
   h3.contentEditable = true
   const text_container = document.createElement('div')
+  text_container.classList.add('text-container')
   text_container.appendChild(h3)
   task_div.appendChild(text_container)
   const button = document.createElement('button')

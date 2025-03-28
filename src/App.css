@@ -90,8 +90,13 @@ input:focus {
 }
 
 @keyframes appear {
-    0% {opacity: 0%;}
-    100% {opacity: 100%;}
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
 }
 
 .task {
@@ -104,7 +109,9 @@ input:focus {
     width: 450px;
     border-radius: 10px;
     margin-bottom: 10px;
+
     h3 {
+        position: relative;
         max-width: 300px;
         font-weight: 400;
         padding: 3px;
@@ -112,11 +119,33 @@ input:focus {
         border-bottom: 2px solid transparent;
         cursor: pointer;
     }
-    h3:active, h3:focus {
+
+    h3::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0.1em;
+        background-color: var(--font-color);
+        opacity: 0;
+        transition: opacity 300ms, transform 300ms;
+        opacity: 1;
+        transform: scale(0);
+        transform-origin: center;
+    }
+
+    h3:active,
+    h3:focus {
         outline: 0;
-        border-bottom: 2px solid var(--font-color);
         cursor: text;
     }
+
+    h3:active::after,
+    h3:focus::after {
+        transform: scale(1);
+    }
+
     button {
         width: 30px;
         height: 30px;
@@ -146,6 +175,7 @@ input:focus {
     .input {
         width: 350px;
     }
+
     .task {
         width: 350px;
     }
