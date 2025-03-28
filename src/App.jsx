@@ -85,7 +85,7 @@ function App() {
             <span>Write down your tasks to never forget them!</span>
           </div>
           <div className="input">
-            <input type="text" autoFocus id='submit-input' onKeyDown={keyDown} />
+            <input type="text" autoFocus id='submit-input' onKeyDown={keyDown} aria-label='Write your tasks here and then, press Enter'/>
             <img src={
               submit_src
             } alt="submit" id="submit" onClick={addTask} />
