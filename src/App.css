@@ -5,7 +5,7 @@
     --font: "Winky Sans", Arial;
     --font-color: light-dark(black, white);
     --submit: light-dark(url('../assets/submit-dark.svg'), url('../assets/submit-light.svg'));
-    --input-bg: light-dark(white, black)
+    --input-bg: light-dark(white, #121212)
 }
 
 * {
@@ -107,6 +107,15 @@ input:focus {
     h3 {
         max-width: 300px;
         font-weight: 400;
+        padding: 3px;
+        transition: all .35s;
+        border-bottom: 2px solid transparent;
+        cursor: pointer;
+    }
+    h3:active, h3:focus {
+        outline: 0;
+        border-bottom: 2px solid var(--font-color);
+        cursor: text;
     }
     button {
         width: 30px;

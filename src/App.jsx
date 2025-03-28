@@ -10,6 +10,7 @@ function createTask(text) {
   task_div.classList.add('task')
   const h3 = document.createElement('h3')
   h3.textContent = text
+  h3.contentEditable = true
   const text_container = document.createElement('div')
   text_container.appendChild(h3)
   task_div.appendChild(text_container)
@@ -73,7 +74,10 @@ function App() {
   return (
     <>
       <title>SamTask - Never forget anything!</title>
-      <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+      <link rel="icon" type="image/x-icon" href="./assets/favicon-48x48.ico" sizes='48x48'/>
+      <link rel="icon" type="image/x-icon" href="./assets/favicon-64x64.ico" sizes='64x64'/>
+      <link rel="icon" type="image/x-icon" href="./assets/favicon-128x128.ico" sizes='128x128'/>
+      <link rel="icon" type="image/x-icon" href="./assets/favicon-256x256.ico" sizes='256x256'/>
       <div className="app">
         <header>
           <div className="title">
