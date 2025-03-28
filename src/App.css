@@ -5,6 +5,7 @@
     --font: "Winky Sans", Arial;
     --font-color: light-dark(black, white);
     --submit: light-dark(url('../assets/submit-dark.svg'), url('../assets/submit-light.svg'));
+    --input-bg: light-dark(white, black)
 }
 
 * {
@@ -74,11 +75,13 @@ input {
     font-size: large;
     border: 0;
     padding: 3px;
+    background-color: var(--input-bg);
 }
 
 input:active,
 input:focus {
     outline: 0;
+    background-color: var(--input-bg);
 }
 
 #tasks {

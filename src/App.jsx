@@ -69,7 +69,7 @@ function App() {
     submit_src = './assets/submit-light.svg'
   }
 
-
+  
   return (
     <>
       <title>SamTask - Never forget anything!</title>
@@ -88,12 +88,11 @@ function App() {
           </div>
         </header>
         <div id="tasks">
-          
+
         </div>
       </div>
     </>
   )
 }
-
 
 export default App
