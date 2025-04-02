@@ -59,12 +59,12 @@ header {
     align-items: center;
 }
 
-#submit {
+.input img {
     transition: scale .5s;
     cursor: pointer;
 }
 
-#submit:hover {
+.input img:hover {
     scale: 120%;
 }
 

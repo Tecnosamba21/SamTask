@@ -11,6 +11,11 @@ function createTask(text) {
   const h3 = document.createElement('h3')
   h3.textContent = text
   h3.contentEditable = true
+  h3.onkeydown = (key) => {
+    if (key.key === 'Enter') {
+      key.preventDefault()
+    }
+  }
   const text_container = document.createElement('div')
   text_container.classList.add('text-container')
   text_container.appendChild(h3)
@@ -63,6 +68,7 @@ function keyDown(e) {
 }
 
 
+
 function App() {
 
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -71,14 +77,14 @@ function App() {
     submit_src = './assets/submit-light.svg'
   }
 
-  
+
   return (
     <>
       <title>SamTask - Never forget anything!</title>
-      <link rel="icon" type="image/x-icon" href="./assets/favicon-48x48.ico" sizes='48x48'/>
-      <link rel="icon" type="image/x-icon" href="./assets/favicon-64x64.ico" sizes='64x64'/>
-      <link rel="icon" type="image/x-icon" href="./assets/favicon-128x128.ico" sizes='128x128'/>
-      <link rel="icon" type="image/x-icon" href="./assets/favicon-256x256.ico" sizes='256x256'/>
+      <link rel="icon" type="image/x-icon" href="./assets/favicon-48x48.ico" sizes='48x48' />
+      <link rel="icon" type="image/x-icon" href="./assets/favicon-64x64.ico" sizes='64x64' />
+      <link rel="icon" type="image/x-icon" href="./assets/favicon-128x128.ico" sizes='128x128' />
+      <link rel="icon" type="image/x-icon" href="./assets/favicon-256x256.ico" sizes='256x256' />
       <div className="app">
         <header>
           <div className="title">
@@ -86,7 +92,7 @@ function App() {
             <span>Write down your tasks to never forget them!</span>
           </div>
           <div className="input">
-            <input type="text" autoFocus id='submit-input' onKeyDown={keyDown} aria-label='Write your tasks here and then, press Enter'/>
+            <input type="text" autoFocus id='submit-input' onKeyDown={keyDown} aria-label='Write your tasks here and then, press Enter' />
             <img src={
               submit_src
             } alt="submit" id="submit" onClick={addTask} />
