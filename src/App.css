@@ -5,7 +5,27 @@
     --font: "Winky Sans", Arial;
     --font-color: light-dark(black, white);
     --submit: light-dark(url('../assets/submit-dark.svg'), url('../assets/submit-light.svg'));
-    --input-bg: light-dark(white, #121212)
+    --input-bg: light-dark(white, #121212);
+    --scrollbar-color: grey;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--input-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-color);
+    border: 2px solid var(--input-bg);
+    border-radius: 999999px;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:increment {
+    border-width: 8px 8px 0 8px;
+    border-color: #555555 transparent transparent transparent;
 }
 
 * {
@@ -13,6 +33,7 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 
 
 body {
@@ -24,6 +45,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 100px;
+    animation: appear .5s;
 }
 
 .app {
