@@ -1,4 +1,4 @@
-![Logo](./assets/favicon.ico)
+![Logo](./public/assets/favicon-128x128.ico)
 
 # SamTask
 
